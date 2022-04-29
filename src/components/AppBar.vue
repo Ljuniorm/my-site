@@ -1,27 +1,37 @@
 <template>
   <v-app-bar
-    app
-    class="nav"
+    fixed
     height="80"
-    :color="colorAppBar.color"
     dark
+    :color="colorAppBar.color"
     :flat="colorAppBar.flat"
+    :elevation="positionScroll ? 10 : 0"
   >
-    <v-row align="center" no-gutters class="px-6">
-      <v-col cols="6">
-        <v-progress-circular
-          size="62"
-          rotate="1500"
-          indeterminate
-          color="#CACEDE"
-        >
-          <v-avatar size="60">
-            <img src="../assets/eu.jpg" sizes="40" />
+    <v-row justify="center" align="center" no-gutters class="px-6">
+      <v-col>
+        <v-row align="center" no-gutters>
+          <v-avatar style="border: 2px solid white" size="60">
+            <v-img src="../assets/eu.png" contain/>
           </v-avatar>
-        </v-progress-circular>
-        <span class="ml-4 mb-12 name">Luiz Junior</span>
+          <span class="ml-4 name">Luiz Junior</span>
+        </v-row>
       </v-col>
-      <v-col cols="6"><span>eae</span> </v-col>
+      <v-col cols="6">
+        <v-row no-gutters>
+          <v-col class="mr-n4" align="center">
+            <span class="menu-text-items">Sobre</span>
+          </v-col>
+          <v-col align="center">
+            <span class="menu-text-items">Competências</span>
+          </v-col>
+          <v-col class="mr-n4" align="center">
+            <span class="menu-text-items">Experiência</span>
+          </v-col>
+          <v-col align="center">
+            <span class="menu-text-items">Projetos</span>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-row>
   </v-app-bar>
 </template>
@@ -54,4 +64,11 @@ export default {
 <style lang="sass" scoped>
 .name
   font-size: 25px
+  font-weight: bold
+
+.menu-text-items
+  font-size: 20px
+  border-width: 0 0 1px
+  border-style: solid
+  boder-color: white
 </style>
