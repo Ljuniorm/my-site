@@ -18,5 +18,13 @@ export default {
 <style>
  * {
    font-family: 'Oswald', sans-serif !important;
+   letter-spacing: 1.8px;
  }
+</style>
+
+<style lang="sass">
+.title-section
+  font-size: 28px
+  font-weight: bold
+  color: white
 </style>

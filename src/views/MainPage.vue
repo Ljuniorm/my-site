@@ -2,18 +2,19 @@
   <div>
     <app-bar/>
     <cover/>
-    <about/>
+    <about-me/>
+    <project-technologies/>
   </div>
 </template>
 
 <script>
 import AppBar from '../components/AppBar.vue'
-import About from '../components/sections/About.vue'
+import AboutMe from '../components/sections/AboutMe.vue'
 import Cover from '../components/sections/Cover.vue'
-// @ is an alias to /src
+import ProjectTechnologies from '../components/sections/ProjectTechnologies.vue'
 
 export default {
-  components: { Cover, About, AppBar },
+  components: { Cover, AboutMe, AppBar, ProjectTechnologies },
   name: 'Home'
 }
 </script>

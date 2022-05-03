@@ -19,7 +19,6 @@ export default {
   width: 100vw
   background-image: url("../../assets/background-cover.jpg")
   background-size: 100% 100%
-  background-attachment: fixed
   display: flex
   flex-direction: column
   justify-content: center

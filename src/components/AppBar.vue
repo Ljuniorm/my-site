@@ -68,7 +68,10 @@ export default {
 
 .menu-text-items
   font-size: 20px
-  border-width: 0 0 1px
-  border-style: solid
-  boder-color: white
+
+  &:hover
+    border-width: 0 0 1px
+    border-style: solid
+    boder-color: white
+    cursor: pointer
 </style>
