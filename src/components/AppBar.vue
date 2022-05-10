@@ -19,16 +19,16 @@
       <v-col cols="6">
         <v-row no-gutters>
           <v-col class="mr-n4" align="center">
-            <span class="menu-text-items">Sobre</span>
+            <span class="menu-text-items">About</span>
           </v-col>
           <v-col align="center">
-            <span class="menu-text-items">Competências</span>
+            <span class="menu-text-items">Skills</span>
+          </v-col>
+          <v-col align="center">
+            <span class="menu-text-items">Experience</span>
           </v-col>
           <v-col class="mr-n4" align="center">
-            <span class="menu-text-items">Experiência</span>
-          </v-col>
-          <v-col align="center">
-            <span class="menu-text-items">Projetos</span>
+            <span class="menu-text-items">Contact</span>
           </v-col>
         </v-row>
       </v-col>

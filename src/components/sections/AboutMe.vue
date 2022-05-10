@@ -1,45 +1,35 @@
 <template>
   <div class="container-about">
-     <v-row class="pt-10 mb-n6" justify="center" no-gutters>
-       <span class="white--text title-section">Compêtencias</span>
+     <v-row class="mb-n16 pt-10" justify="center" no-gutters>
+       <span class="white--text title-section">About</span>
      </v-row>
-     <v-row no-gutters>
-       <v-col class="pr-16">
-         <v-card class="card-about" height="550px" width="400px"></v-card>
+     <v-row class="mt-n16" align="center" justify="center" no-gutters>
+       <v-col class="px-12" align="justify" cols="6">
+          <span class="white--text">
+            Hello my name is Luiz but I prefer to be called Junior, I'm 22 years old, I live in Florianópolis/SC which is located in Brazil, I'm passionate about my profession, my hobby has always been staying and playing on my computer since I was little, I'm a very communicative and happy.
+          </span>
        </v-col>
-       <v-col class="pl-16">
-         <v-card elevation="100" class="card-about" height="550px" width="400px"></v-card>
+       <v-col align="center" cols="6">
+          <v-img style="border-radius: 3000px; border: 3px solid white" src="../../assets/me-about.jpg" contain height="228" width="250"></v-img>
        </v-col>
      </v-row>
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style lang="sass" scoped>
-$small: 300px
-$medium: 900px
 
 .container-about
   display: flex
   align-items: center
   flex-direction: column
-  height: 800px
-  background-image: linear-gradient(#030303, #1b1d36)
+  height: 400px
+  background-image: linear-gradient(#030303, #1b1d36, #030303)
   width: 100vw
   background-color: black
+  padding: 0px 400px
 
-.card-about
-  border-radius: 15px !important
-  background-image: linear-gradient(#030303, #1b1d36)
-  -webkit-border-radius: 15px !important
-  -moz-border-radius: 15px !important
-  border: 3px solid rgba(27,29,54,1)
-
-.smth 
-  @media screen and (max-width: $small) 
-  @media screen and (min-width: $medium)
 </style>
