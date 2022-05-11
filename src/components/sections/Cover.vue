@@ -3,8 +3,11 @@
     <v-avatar class="mb-3" style="border: 2px solid white" size="225">
       <img src="../../assets/eu-cover.png" />
     </v-avatar>
-    <span class="white--text my-name">Luiz Roberto Lopes de Moura Junior</span>
-    <span class="white--text my-subtitle">Front-end and Mobile Developer</span>
+    <div style="text-align: center" :class="$vuetify.breakpoint.mdAndUp ? '' : 'px-10'">
+      <span class="white--text my-name">Luiz Roberto Lopes de Moura Junior</span>
+      <br>
+      <span class="white--text my-subtitle">Front-end and Mobile Developer</span>
+    </div>
   </div>
 </template>
 

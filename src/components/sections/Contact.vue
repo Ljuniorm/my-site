@@ -1,9 +1,9 @@
 <template>
   <div class="container-contact">
-    <v-row no-gutters justify="center">
+    <v-row class="py-6" no-gutters justify="center">
       <span class="title-section">Contact</span>
     </v-row>
-    <v-row class="pb-3" justify="center" no-gutters>
+    <v-row class="pb-8" justify="center" no-gutters>
       <v-btn class="px-8" height="40" width="40" color="white" icon @click="openUrlLink(contact.url)" v-for="(contact, i) in contacts" :key="i">
         <v-icon size="40">
           {{contact.icon}}
@@ -30,7 +30,6 @@ export default {
 
 <style lang="sass" scoped>
 .container-contact
-  height: 150px
   width: 100vw
   background-color: black
   display: flex

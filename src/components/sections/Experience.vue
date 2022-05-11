@@ -1,19 +1,17 @@
 <template>
   <div class="container-experience">
-    <v-row no-gutters class="mb-8" justify="center">
+    <v-row no-gutters class="my-8" justify="center">
       <span class="title-section">Experience</span>
     </v-row>
-    <v-row class="py-6" style="width: 100%" align="center" v-for="(experience, index) in experiences" :key="index" justify="center" no-gutters>
-      <v-col align="justify" class="column-description px-12" cols="5">
+    <v-row class="py-6 row-description" style="width: 100%" align="center" v-for="(experience, index) in experiences" :key="index" justify="center" no-gutters>
+      <div :class="$vuetify.breakpoint.mdAndUp ? '' : 'div-column-experience'" style="min-width: 300px">
         <span>{{experience.office}}</span>
-        <br>
+        <br v-if="$vuetify.breakpoint.mdAndUp">
         <span>{{experience.company}}</span>
-        <br>
+        <br v-if="$vuetify.breakpoint.mdAndUp">
         <span>{{experience.time}}</span>
-      </v-col>
-      <v-col align="center" cols="2">
-        <v-img class="ml-n16" style="border-radius: 30px; border: 3px solid white" :src="experience.image" contain height="100" width="100"></v-img>
-      </v-col>
+      </div>
+      <v-img :class="$vuetify.breakpoint.mdAndUp ? '' : 'mt-6'" style="border-radius: 30px; border: 3px solid white" :src="experience.image" contain max-height="100" max-width="100"></v-img>
     </v-row>
   </div>
 </template>
@@ -33,6 +31,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.div-column-experience
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
 .container-experience
   height: 100%
   width: 100vw
@@ -41,8 +45,7 @@ export default {
   flex-direction: column
   justify-content: center
   align-items: center
-  padding: 0px 400px
-  padding-bottom: 85px
+  padding-bottom: 50px
 
 .card-image
   border-radius: 15px
@@ -51,7 +54,7 @@ export default {
   justify-content: center
   align-items: center
 
-.column-description
+.row-description
   span
    color: white
 </style>

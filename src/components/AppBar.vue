@@ -16,19 +16,19 @@
           <span class="ml-4 name">Luiz Junior</span>
         </v-row>
       </v-col>
-      <v-col cols="6">
+      <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="6">
         <v-row no-gutters>
           <v-col class="mr-n4" align="center">
-            <span class="menu-text-items">About</span>
+            <span @click="handleScrollTo('.container-about', 0)" class="menu-text-items">About</span>
           </v-col>
           <v-col align="center">
-            <span class="menu-text-items">Skills</span>
+            <span @click="handleScrollTo('.container-skills', 0)" class="menu-text-items">Skills</span>
           </v-col>
           <v-col align="center">
-            <span class="menu-text-items">Experience</span>
+            <span @click="handleScrollTo('.container-experience', 0)" class="menu-text-items">Experience</span>
           </v-col>
           <v-col class="mr-n4" align="center">
-            <span class="menu-text-items">Contact</span>
+            <span @click="handleScrollTo('.container-contact', 0)" class="menu-text-items">Contact</span>
           </v-col>
         </v-row>
       </v-col>
@@ -56,6 +56,12 @@ export default {
   methods: {
     handleScroll() {
       this.positionScroll = window.scrollY;
+    },
+    handleScrollTo (element, ofs) {
+      console.log()
+      this.$scrollTo(element, 500, {
+        offset: -50
+      })
     },
   },
 };

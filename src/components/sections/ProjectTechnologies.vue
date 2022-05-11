@@ -1,12 +1,14 @@
 <template>
   <div class="container-technology">
-    <v-row no-gutters justify="center">
+    <v-row class="pt-6" :class="$vuetify.breakpoint.mdAndUp ? '' : 'px-14'" no-gutters justify="center">
       <span class="title-section">Technologies used in the project</span>
     </v-row>
-    <v-row justify="center" no-gutters>
-      <v-card v-for="(image, i) in images" :key="i" class="pa-3 mx-5 card-image" height="150" width="150">
-        <v-img  :src="image" contain height="75" width="75"></v-img>
-      </v-card>
+    <v-row class="py-12" justify="center" no-gutters>
+      <v-col align="center" :class="$vuetify.breakpoint.mdAndUp ? '' : 'py-6'" :cols="$vuetify.breakpoint.mdAndUp ? '' : '12'" v-for="(image, i) in images" :key="i" >
+        <v-card class="pa-3 mx-5 card-image" height="150" width="150">
+          <v-img  :src="image" contain height="75" width="75"></v-img>
+        </v-card>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -27,7 +29,6 @@ export default {
 
 <style lang="sass" scoped>
 .container-technology
-  height: 300px
   width: 100vw
   background-color: black
   display: flex

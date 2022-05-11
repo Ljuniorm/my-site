@@ -1,13 +1,13 @@
 <template>
   <div class="container-skills">
-     <v-row class="pt-10 mb-n6" justify="center" no-gutters>
+     <v-row class="pt-8" justify="center" no-gutters>
        <span class="white--text title-section">Skills</span>
      </v-row>
-     <v-row no-gutters>
+     <v-row class="py-12" no-gutters>
        <v-col>
-         <v-card  class="card-skills" height="300px" width="800px">
+         <v-card class="card-skills">
            <v-row no-gutters>
-             <v-col class="py-4" align="center" cols="3" v-for="(skill, index) in skills" :key="index">
+             <v-col class="py-4" align="center" :cols="$vuetify.breakpoint.mdAndUp ? '3' : '6'" v-for="(skill, index) in skills" :key="index">
                 <h3 class="white--text" style="text-align: center">• {{skill}}</h3>
              </v-col>
            </v-row>
@@ -28,12 +28,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+$small: 950px
 
 .container-skills
   display: flex
   align-items: center
   flex-direction: column
-  height: 550px
   background-color: black
   width: 100vw
   background-color: black
@@ -47,4 +47,12 @@ export default {
   display: flex
   justify-content: center
   align-items: center
+  height: 300px
+  width: 800px
+
+.card-skills
+  @media screen and (max-width: $small)
+    height: 100%
+    width: 300px
+    padding: 12px
 </style>
