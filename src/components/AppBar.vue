@@ -32,14 +32,23 @@
           </v-col>
         </v-row>
       </v-col>
+      <v-btn v-if="!$vuetify.breakpoint.mdAndUp" icon @click="drawer = !drawer">
+        <v-icon>
+          mdi-menu
+        </v-icon>
+      </v-btn>
+      <nav-bar v-if="!$vuetify.breakpoint.mdAndUp" :drawer="drawer" @closeNav="drawer = false" @handleScrollTo="handleScrollTo"/>
     </v-row>
   </v-app-bar>
 </template>
 
 <script>
+import NavBar from './appBar/NavBar.vue';
 export default {
+  components: { NavBar },
   data: () => ({
     positionScroll: 0,
+    drawer: false
   }),
   created() {
     document.addEventListener("scroll", this.handleScroll);

@@ -17,7 +17,7 @@
 export default {
   data () {
     return {
-      contacts: [{icon: 'mdi-instagram', url: 'https://www.instagram.com/juniorlimaam/'}, {icon: 'mdi-linkedin', url: 'https://www.linkedin.com/in/luizrobertolopes/'}, {icon: 'mdi-github', url: 'https://www.linkedin.com/in/luizrobertolopes/'}]
+      contacts: [{icon: 'mdi-instagram', url: 'https://www.instagram.com/juniorlimaam/'}, {icon: 'mdi-linkedin', url: 'https://www.linkedin.com/in/luizrobertolopes/'}, {icon: 'mdi-github', url: 'https://github.com/Ljuniorm'}]
     }
   },
   methods: {

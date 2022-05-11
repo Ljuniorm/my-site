@@ -4,14 +4,16 @@
       <span class="title-section">Experience</span>
     </v-row>
     <v-row class="py-6 row-description" style="width: 100%" align="center" v-for="(experience, index) in experiences" :key="index" justify="center" no-gutters>
-      <div :class="$vuetify.breakpoint.mdAndUp ? '' : 'div-column-experience'" style="min-width: 300px">
+      <div :class="$vuetify.breakpoint.mdAndUp ? '' : 'box-description-experience'" style="min-width: 300px">
         <span>{{experience.office}}</span>
         <br v-if="$vuetify.breakpoint.mdAndUp">
         <span>{{experience.company}}</span>
         <br v-if="$vuetify.breakpoint.mdAndUp">
         <span>{{experience.time}}</span>
       </div>
-      <v-img :class="$vuetify.breakpoint.mdAndUp ? '' : 'mt-6'" style="border-radius: 30px; border: 3px solid white" :src="experience.image" contain max-height="100" max-width="100"></v-img>
+      <div :class="$vuetify.breakpoint.mdAndUp ? '' : 'box-image-experience'">
+        <v-img :class="$vuetify.breakpoint.mdAndUp ? '' : 'mt-6'" style="border-radius: 30px; border: 3px solid white" :src="experience.image" contain max-height="100" max-width="100"></v-img>
+      </div>
     </v-row>
   </div>
 </template>
@@ -31,9 +33,16 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.div-column-experience
+.box-description-experience
   display: flex
   flex-direction: column
+  justify-content: center
+  align-items: center
+
+.box-image-experience
+  width: 300px !important
+  display: flex
+  flex-direction: row
   justify-content: center
   align-items: center
 
