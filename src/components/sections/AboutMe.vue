@@ -10,7 +10,7 @@
           </span>
        </v-col>
        <v-col :class="$vuetify.breakpoint.mdAndUp ? '' : 'py-6'" :order="$vuetify.breakpoint.mdAndUp ? 2 : 1" align="center" :cols="$vuetify.breakpoint.mdAndUp ? '3' : '12'">
-          <v-img style="border-radius: 3000px; border: 3px solid white" src="../../assets/me-about.jpg" contain height="228" width="250"></v-img>
+          <v-img eager style="border-radius: 3000px; border: 3px solid white" src="../../assets/me-about.jpg" contain height="228" width="250"></v-img>
        </v-col>
      </v-row>
   </div>

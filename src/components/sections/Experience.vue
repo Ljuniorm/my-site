@@ -12,7 +12,7 @@
         <span>{{experience.time}}</span>
       </div>
       <div :class="$vuetify.breakpoint.mdAndUp ? '' : 'box-image-experience'">
-        <v-img :class="$vuetify.breakpoint.mdAndUp ? '' : 'mt-6'" style="border-radius: 30px; border: 3px solid white" :src="experience.image" contain max-height="100" max-width="100"></v-img>
+        <v-img eager :class="$vuetify.breakpoint.mdAndUp ? '' : 'mt-6'" style="border-radius: 30px; border: 3px solid white" :src="experience.image" contain max-height="100" max-width="100"></v-img>
       </div>
     </v-row>
   </div>

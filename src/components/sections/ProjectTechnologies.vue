@@ -6,7 +6,7 @@
     <v-row class="py-12" justify="center" no-gutters>
       <v-col align="center" :class="$vuetify.breakpoint.mdAndUp ? '' : 'py-6'" :cols="$vuetify.breakpoint.mdAndUp ? '' : '12'" v-for="(image, i) in images" :key="i" >
         <v-card class="pa-3 mx-5 card-image" height="150" width="150">
-          <v-img  :src="image" contain height="75" width="75"></v-img>
+          <v-img eager :src="image" contain height="75" width="75"></v-img>
         </v-card>
       </v-col>
     </v-row>

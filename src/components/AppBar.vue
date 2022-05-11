@@ -11,7 +11,7 @@
       <v-col>
         <v-row align="center" no-gutters>
           <v-avatar style="border: 2px solid white" size="60">
-            <v-img src="../assets/eu.png" contain/>
+            <v-img eager src="../assets/eu.png" contain/>
           </v-avatar>
           <span class="ml-4 name">Luiz Junior</span>
         </v-row>
